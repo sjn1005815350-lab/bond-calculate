@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>债券资金与持仓计算 · 文档入口</title>
+  <style>
+    :root {
+      --accent: #2563eb;
+      --accent-dark: #1d4ed8;
+      --accent-bg: #eff6ff;
+      --border: #e5e7eb;
+      --text: #1f2937;
+      --muted: #6b7280;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(160deg, #f0f4ff 0%, #f7f8fa 50%, #eef2ff 100%);
+      color: var(--text);
+      font-family: -apple-system, "Segoe UI", "Microsoft YaHei", Arial, sans-serif;
+      line-height: 1.6;
+    }
+    .page {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px 24px 64px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: var(--accent-bg);
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    h1 {
+      margin: 0 0 12px;
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    .subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+    .cards {
+      display: grid;
+      gap: 16px;
+    }
+    .card {
+      display: block;
+      padding: 24px 28px;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      transition: border-color 0.2s, box-shadow 0.2s, transform 0.15s;
+    }
+    .card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 8px 24px rgba(37, 99, 235, 0.12);
+      transform: translateY(-2px);
+    }
+    .card-primary {
+      border-color: #bfdbfe;
+      background: linear-gradient(135deg, #fff 0%, #f8faff 100%);
+    }
+    .card-title {
+      margin: 0 0 8px;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--accent-dark);
+    }
+    .card-desc {
+      margin: 0;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .card-arrow {
+      float: right;
+      margin-top: -28px;
+      font-size: 20px;
+      color: var(--accent);
+      opacity: 0.6;
+    }
+    .card:hover .card-arrow { opacity: 1; }
+    footer {
+      margin-top: 40px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <span class="badge">OMS 1.6.0 · 功能点六</span>
+      <h1>债券 2side 资金与持仓计算</h1>
+      <p class="subtitle">TRS=T+0/T+1 对比 · 三档保证金率 · 冻结释放 · 浮动盈亏算例</p>
+    </header>
+
+    <div class="cards">
+      <a class="card card-primary" href="债券2side资金持仓计算示例.html">
+        <span class="card-arrow">→</span>
+        <h2 class="card-title">在线阅读（推荐）</h2>
+        <p class="card-desc">完整 HTML 版，含表格排版与六个场景分步计算，适合直接浏览与分享。</p>
+      </a>
+
+      <a class="card" href="债券2side资金持仓计算示例.md">
+        <span class="card-arrow">→</span>
+        <h2 class="card-title">Markdown 源文件</h2>
+        <p class="card-desc">原始 Markdown 文档，便于复制、编辑或在 IDE 中查看。</p>
+      </a>
+    </div>
+
+    <footer>
+      <p>仓库：<a href="https://github.com/sjn1005815350-lab/bond-calculate" target="_blank" rel="noopener">bond-calculate</a></p>
+    </footer>
+  </div>
+</body>
+</html>
